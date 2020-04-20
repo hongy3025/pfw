@@ -11,6 +11,7 @@ var localAddr *string = flag.String("local", ":8080", "local address")
 var remoteAddr *string = flag.String("remote", "127.0.0.1:11000", "remote address")
 
 func main() {
+	flag.Parse()
 
 	ln, err := net.Listen("tcp", *localAddr)
 	if err != nil {
